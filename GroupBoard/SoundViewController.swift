@@ -8,11 +8,14 @@
 
 import UIKit
 import Firebase
-class SoundViewController: UICollectionViewController, UIGestureRecognizerDelegate {
+import AVFoundation
+
+class SoundViewController: UICollectionViewController, AVAudioPlayerDelegate, UIGestureRecognizerDelegate {
 
    
     @IBOutlet weak var soundBoard: UICollectionView!
     var sounds: [SoundObj] = []
+    var audioPlayer: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +25,8 @@ class SoundViewController: UICollectionViewController, UIGestureRecognizerDelega
         
         self.soundBoard.delegate = self
         self.soundBoard.dataSource = self
+        
+        setupGestures()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,13 +61,13 @@ class SoundViewController: UICollectionViewController, UIGestureRecognizerDelega
     
     // MARK: UICollectionViewDataSource
     
-     override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     
-     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return sounds.count + 1
     }
@@ -94,6 +99,61 @@ class SoundViewController: UICollectionViewController, UIGestureRecognizerDelega
         }
     }
     
+    
+    /*override func collectionView(_ collectionView: UICollectionView, didSelectItemAtIndextPath: IndexPath) {
+        
+    }*/
+    
+    func playTapped(index: Int) {
+        let audioFileName = sounds[index].soundURL!
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: audioFileName)
+            audioPlayer.delegate = self
+            audioPlayer.play()
+        } catch {
+            showAlert(flag: "audio")
+        }
+    }
+    
+    func showAlert(flag: String) {
+        switch flag {
+        case "audio" :
+            let alert = UIAlertController(title: "Oops", message: "Cannot play audio for some reason...", preferredStyle: UIAlertControllerStyle.alert)
+            let action = UIAlertAction(title: "Okay", style: UIAlertActionStyle.cancel, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        default:
+            let alert = UIAlertController(title: "Oops", message: "Unknown error :(", preferredStyle: UIAlertControllerStyle.alert)
+            let action = UIAlertAction(title: "Okay", style: UIAlertActionStyle.cancel, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+        
+    func setupGestures() {
+        //single tap
+        let singleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(SoundViewController.handleSingleTap(_:)))
+        singleTapRecognizer.delegate = self
+        singleTapRecognizer.numberOfTapsRequired = 1
+        singleTapRecognizer.cancelsTouchesInView = false
+        soundBoard.addGestureRecognizer(singleTapRecognizer)
+    }
+    
+    func handleSingleTap(_ sender: UITapGestureRecognizer) {
+        let p = sender.location(in: self.soundBoard)
+        
+        if let indexPath = self.soundBoard.indexPathForItem(at: p) {
+            //let cell = self.soundBoard.cellForItem(at: indexPath)
+            let row = indexPath.row
+            if (row < sounds.count) {
+                playTapped(index: row)
+            } else {
+                performSegue(withIdentifier: "addSound", sender: self)
+            }
+        }
+        
+    }
+        
     // MARK: UICollectionViewDelegate
     
     /*

@@ -89,7 +89,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                     <state key="normal" title="+"/>
                                     <connections>
-                                        <segue destination="VYJ-B8-f98" kind="presentation" id="8Lh-Wk-4K2"/>
+                                        <segue destination="VYJ-B8-f98" kind="presentation" identifier="addSound" id="8Lh-Wk-4K2"/>
                                     </connections>
                                 </button>
                             </subviews>
