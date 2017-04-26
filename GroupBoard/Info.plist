@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>GroupBoard wants to use your camera/photo library to associated images with your sounds</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>GroupBoard wants to use your microphone to share sounds with your friends!</string>
 	<key>CFBundleDevelopmentRegion</key>

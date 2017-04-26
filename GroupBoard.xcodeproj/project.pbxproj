@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7385D6381EB04F1700514A54 /* SoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385D6371EB04F1700514A54 /* SoundButton.swift */; };
+		7385D63A1EB0575C00514A54 /* AddSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385D6391EB0575C00514A54 /* AddSoundViewController.swift */; };
+		7385D67D1EB06D9B00514A54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385D67C1EB06D9B00514A54 /* ViewController.swift */; };
+		7385D67F1EB071DA00514A54 /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385D67E1EB071DA00514A54 /* SoundViewController.swift */; };
+		7385D6811EB0766700514A54 /* SoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385D6801EB0766700514A54 /* SoundCell.swift */; };
+		7385D6831EB0890500514A54 /* addbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7385D6821EB0890500514A54 /* addbutton@2x.png */; };
+		7385D6851EB08AAD00514A54 /* BoardHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385D6841EB08AAD00514A54 /* BoardHeader.swift */; };
+		7385D6871EB090C300514A54 /* SoundObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385D6861EB090C300514A54 /* SoundObj.swift */; };
 		73A887301EA93E1E0032AFED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A8872F1EA93E1E0032AFED /* AppDelegate.swift */; };
-		73A887321EA93E1E0032AFED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A887311EA93E1E0032AFED /* ViewController.swift */; };
 		73A887351EA93E1E0032AFED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73A887331EA93E1E0032AFED /* Main.storyboard */; };
 		73A887381EA93E1E0032AFED /* GroupBoard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73A887361EA93E1E0032AFED /* GroupBoard.xcdatamodeld */; };
 		73A8873A1EA93E1E0032AFED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73A887391EA93E1E0032AFED /* Assets.xcassets */; };
@@ -45,10 +50,15 @@
 		13F5048457DE5A70FDFEDE0C /* Pods-GroupBoard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupBoard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GroupBoard/Pods-GroupBoard.debug.xcconfig"; sourceTree = "<group>"; };
 		415A7274A44B17FDF24C8A6B /* Pods_GroupBoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroupBoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C92CBEC92A76DAC1AA92630 /* Pods-GroupBoardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupBoardUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GroupBoardUITests/Pods-GroupBoardUITests.release.xcconfig"; sourceTree = "<group>"; };
-		7385D6371EB04F1700514A54 /* SoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundButton.swift; sourceTree = "<group>"; };
+		7385D6391EB0575C00514A54 /* AddSoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSoundViewController.swift; sourceTree = "<group>"; };
+		7385D67C1EB06D9B00514A54 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7385D67E1EB071DA00514A54 /* SoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
+		7385D6801EB0766700514A54 /* SoundCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundCell.swift; sourceTree = "<group>"; };
+		7385D6821EB0890500514A54 /* addbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addbutton@2x.png"; sourceTree = "<group>"; };
+		7385D6841EB08AAD00514A54 /* BoardHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardHeader.swift; sourceTree = "<group>"; };
+		7385D6861EB090C300514A54 /* SoundObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundObj.swift; sourceTree = "<group>"; };
 		73A8872C1EA93E1E0032AFED /* GroupBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73A8872F1EA93E1E0032AFED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		73A887311EA93E1E0032AFED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		73A887341EA93E1E0032AFED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		73A887371EA93E1E0032AFED /* GroupBoard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GroupBoard.xcdatamodel; sourceTree = "<group>"; };
 		73A887391EA93E1E0032AFED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -134,13 +144,18 @@
 			isa = PBXGroup;
 			children = (
 				73A8872F1EA93E1E0032AFED /* AppDelegate.swift */,
-				73A887311EA93E1E0032AFED /* ViewController.swift */,
 				73A887331EA93E1E0032AFED /* Main.storyboard */,
-				7385D6371EB04F1700514A54 /* SoundButton.swift */,
+				7385D6841EB08AAD00514A54 /* BoardHeader.swift */,
+				7385D6801EB0766700514A54 /* SoundCell.swift */,
+				7385D6861EB090C300514A54 /* SoundObj.swift */,
+				7385D6391EB0575C00514A54 /* AddSoundViewController.swift */,
+				7385D67C1EB06D9B00514A54 /* ViewController.swift */,
+				7385D67E1EB071DA00514A54 /* SoundViewController.swift */,
 				73A887391EA93E1E0032AFED /* Assets.xcassets */,
 				73A8873B1EA93E1E0032AFED /* LaunchScreen.storyboard */,
 				73A8873E1EA93E1E0032AFED /* Info.plist */,
 				73A887601EA94AF70032AFED /* GoogleService-Info.plist */,
+				7385D6821EB0890500514A54 /* addbutton@2x.png */,
 				73A887361EA93E1E0032AFED /* GroupBoard.xcdatamodeld */,
 			);
 			path = GroupBoard;
@@ -297,6 +312,7 @@
 				73A8873D1EA93E1E0032AFED /* LaunchScreen.storyboard in Resources */,
 				73A8873A1EA93E1E0032AFED /* Assets.xcassets in Resources */,
 				73A887351EA93E1E0032AFED /* Main.storyboard in Resources */,
+				7385D6831EB0890500514A54 /* addbutton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,9 +475,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7385D67D1EB06D9B00514A54 /* ViewController.swift in Sources */,
 				73A887381EA93E1E0032AFED /* GroupBoard.xcdatamodeld in Sources */,
-				7385D6381EB04F1700514A54 /* SoundButton.swift in Sources */,
-				73A887321EA93E1E0032AFED /* ViewController.swift in Sources */,
+				7385D63A1EB0575C00514A54 /* AddSoundViewController.swift in Sources */,
+				7385D6851EB08AAD00514A54 /* BoardHeader.swift in Sources */,
+				7385D6811EB0766700514A54 /* SoundCell.swift in Sources */,
+				7385D6871EB090C300514A54 /* SoundObj.swift in Sources */,
+				7385D67F1EB071DA00514A54 /* SoundViewController.swift in Sources */,
 				73A887301EA93E1E0032AFED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
