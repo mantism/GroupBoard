@@ -1,0 +1,6 @@
+framework module Pods_GroupBoard {
+  umbrella header "Pods-GroupBoard-umbrella.h"
+
+  export *
+  module * { export * }
+}
